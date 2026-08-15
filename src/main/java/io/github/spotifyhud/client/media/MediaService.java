@@ -12,7 +12,7 @@ import java.util.Locale;
 import java.util.concurrent.atomic.AtomicReference;
 
 public final class MediaService implements AutoCloseable {
-    private final AtomicReference<MediaSnapshot> current = new AtomicReference<>(MediaSnapshot.empty());
+    private final AtomicReference<MediaSnapshot> current = new AtomicReference<>(MediaSnapshot.blank());
     private volatile Process process;
     private volatile BufferedWriter writer;
     private volatile boolean closed;
@@ -28,7 +28,7 @@ public final class MediaService implements AutoCloseable {
             try {
                 runHelper();
             } catch (Exception ignored) {
-                current.set(MediaSnapshot.empty());
+                current.set(MediaSnapshot.blank());
             }
             if (!closed) {
                 try { Thread.sleep(1500); } catch (InterruptedException e) { Thread.currentThread().interrupt(); return; }
