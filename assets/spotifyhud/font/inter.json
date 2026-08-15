@@ -1,0 +1,15 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "spotifyhud:inter.ttf",
+      "shift": [0.0, 0.25],
+      "size": 10.0,
+      "oversample": 4.0
+    },
+    {
+      "type": "reference",
+      "id": "minecraft:default"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "spotifyhud",
+  "version": "2.0.1",
+  "name": "Spotify HUD Remastered",
+  "description": "A polished, configurable, cross-platform now-playing HUD with media controls and diagnostics.",
+  "authors": ["Spotify HUD contributors"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/spotifyhud/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.spotifyhud.client.SpotifyHudClient"
+    ],
+    "modmenu": [
+      "io.github.spotifyhud.client.integration.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": ">=0.139.5+1.21.11"
+  },
+  "suggests": {
+    "modmenu": ">=17.0.0"
+  }
+}
