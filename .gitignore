@@ -1,0 +1,15 @@
+.gradle/
+build/
+run/
+out/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.jks
+secrets.properties

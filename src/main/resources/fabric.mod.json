@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "spotifyhud",
+  "version": "${version}",
+  "name": "Spotify HUD Remastered",
+  "description": "A lightweight cross-platform now-playing HUD for Minecraft.",
+  "authors": ["arenzya"],
+  "license": "MIT",
+  "icon": "assets/spotifyhud/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["io.github.spotifyhud.client.SpotifyHudClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "minecraft": "${minecraft_version}",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
