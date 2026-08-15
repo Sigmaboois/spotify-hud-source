@@ -12,7 +12,7 @@ public record MediaSnapshot(
         String player,
         String source
 ) {
-    public static MediaSnapshot empty() {
+    public static MediaSnapshot blank() {
         return new MediaSnapshot(true, "", "", "", 0, 0, false, "", "", "");
     }
 }
