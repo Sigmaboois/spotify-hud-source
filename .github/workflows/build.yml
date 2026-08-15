@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: [port-26.2]
+    branches: [port-26.1.2]
   pull_request:
 
 jobs:
@@ -21,5 +21,5 @@ jobs:
         run: gradle build --stacktrace
       - uses: actions/upload-artifact@v4
         with:
-          name: spotify-hud-26.2-${{ github.sha }}
+          name: spotify-hud-26.1.2-${{ github.sha }}
           path: build/libs/*.jar
