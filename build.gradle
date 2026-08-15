@@ -6,9 +6,7 @@ plugins {
 version = project.mod_version
 group = project.maven_group
 
-base {
-    archivesName = project.archives_base_name
-}
+base { archivesName = project.archives_base_name }
 
 repositories {
     maven { url = 'https://maven.terraformersmc.com/releases/' }
@@ -26,14 +24,14 @@ dependencies {
 processResources {
     inputs.property 'version', project.version
     inputs.property 'minecraft_version', project.minecraft_version
+    from('assets') { into 'assets' }
+    from('spotifyhud') { into 'spotifyhud' }
     filesMatching('fabric.mod.json') {
         expand version: project.version, minecraft_version: project.minecraft_version
     }
 }
 
-tasks.withType(JavaCompile).configureEach {
-    options.release = 21
-}
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
 
 java {
     withSourcesJar()
@@ -42,7 +40,5 @@ java {
 }
 
 jar {
-    from('LICENSE') {
-        rename { "${it}_${project.archives_base_name}" }
-    }
+    from('LICENSE') { rename { "${it}_${project.archives_base_name}" } }
 }
